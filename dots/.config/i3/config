@@ -7,11 +7,12 @@
 ########################################################################
 
 set $mod Mod4
-set $filemanager1 alacritty -e yazi
+set $filemanager1 yazi
 set $filemanager2 nemo
 set $term alacritty
 set $browser firefox
 set $wallpaperdir ~/Pictures/Wallpapers/*
+set $scriptsdir ~/.config/scripts
 
 
 # Scripts
@@ -108,7 +109,7 @@ exec --no-startup-id copyq
 
 bindsym $mod+q kill
 bindsym $mod+Return exec $term
-bindsym $mod+e exec --no-startup-id $filemanager1
+bindsym $mod+e exec --no-startup-id $term -e $filemanager1
 bindsym $mod+Shift+e exec --no-startup-id $filemanager2
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
 
