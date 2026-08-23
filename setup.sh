@@ -12,8 +12,15 @@ sudo pacman -S --needed xorg-server xorg-xinit xorg-xkill xorg-xset
 sudo pacman -S --needed redshift numlockx ddcutil base-devel flatpak
 sudo pacman -S --needed dkms libva-nvidia-driver nvidia-open-dkms linux-headers linux-zen-headers nvidia-utils lib32-nvidia-utils nvidia-settings opencl-nvidia vulkan-icd-loader lib32-vulkan-icd-loader
 sudo pacman -S --needed i3-wm alacritty feh eza yazi mpv mpc mpd dunst udiskie rofi polybar nemo stow starship fastfetch
+sudo pacman -S --needed lutris steam
 
 # Flatpak packages
+flatpak install -y com.vysp3r.ProtonPlus
+flatpak install -y com.google.Chrome
+flatpak install -y com.heroicgameslauncher.hgl
+flatpak install -y org.videolan.VLC
+flatpak install -y org.gimp.GIMP
+flatpak install -y org.kde.kdenlive
 
 
 # ------------------- Yay ----------------------------------
@@ -37,9 +44,13 @@ sudo flatpak override --filesystem=$HOME/.icons
 flatpak override --user --filesystem=xdg-config/gtk-4.0
 sudo flatpak override --filesystem=xdg-config/gtk-4.0
 
+#------------------- Fonts ---------------------------------
+sudo pacman -S --needed ttf-jetbrains-mono ttf-jetbrains-mono-nerd
+fc-cache -fv
+
 #------------------- Link dotfiles -------------------------
 
-stow  alacritty
+stow alacritty
 stow bashrc
 stow dunst
 stow i3
