@@ -9,7 +9,7 @@
     grey:          #928374;
 
     width: 1000;
-    font: "Iosevka 14";
+    font: "Jetbrains Mono 14";
 }
 
 element-text, element-icon , mode-switcher {
@@ -18,7 +18,7 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    height: 360px;
+    height: 800px;
     border: 3px;
     border-color: @border-col;
     background-color: @bg-col;
@@ -71,7 +71,7 @@ element {
 }
 
 element-icon {
-    size: 25px;
+    size: 1.5em; /* Increase this value to make icons bigger */
 }
 
 element selected {

@@ -383,11 +383,14 @@ bindsym $mod+Shift+F11 exec --no-startup-id ~/.config/i3/scripts/backlight_ddc_s
 
 
 # Clipboard manager
-exec --no-startup-id copyq
-bindsym $mod+v exec --no-startup-id copyq show
-for_window [class="copyq"] floating enable, sticky enable, border none
-for_window [class="copyq"] resize set 600 600
-for_window [class="copyq"] move position center
+#exec --no-startup-id copyq
+#bindsym $mod+v exec --no-startup-id copyq show
+#for_window [class="copyq"] floating enable, sticky enable, border none
+#for_window [class="copyq"] resize set 600 600
+#for_window [class="copyq"] move position center
+
+exec --no-startup-id clipmenud
+bindsym $mod+v exec --no-startup-id clipmenu
 
 
 bindsym $mod+Tab workspace next
