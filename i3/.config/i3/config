@@ -1,7 +1,7 @@
 # Defaults
 set $DEFAULT_BROWSER "firefox"
 set $DEFAULT_BROWSER_PRIVATE "firefox --private-window"
-set $DEFAULT_TERMINAL alacritty
+set $DEFAULT_TERMINAL kitty
 set $DEFAULT_FILEMANAGER "nemo"
 
 
@@ -114,10 +114,11 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secr
 ########################################################
 
 # Volume controls
-#bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/scripts/volume_slider.sh up
+
+# keyboard_shortcut_comment: Numpad 8 (Numlock off) - Volume Up
 bindsym KP_Up exec --no-startup-id ~/.config/i3/scripts/volume_slider.sh up
 
-#bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/scripts/volume_slider.sh down
+# keyboard_shortcut_comment: Numpad 2 (Numlock off) - Volume Down
 bindsym KP_Down exec --no-startup-id ~/.config/i3/scripts/volume_slider.sh down
 
 #bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/scripts/volume_slider.sh toggle
@@ -397,10 +398,10 @@ bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 # Float nmtui window
-for_window [class="Alacritty" title="nmtui"] floating enable
+for_window [title="nmtui"] floating enable
 
 # Float pulsemixer window
-for_window [class="Alacritty" title="pulsemixer"] floating enable
+for_window [title="pulsemixer"] floating enable
 
 # Float imv
 for_window [class="imv"] floating enable
@@ -527,12 +528,10 @@ bindsym $mod+Shift+s exec --no-startup-id ~/.config/i3/scripts/sticky-toggle.sh
 
 exec --no-startup-id numlockx on
 
-bindsym $mod+Shift+c exec --no-startup-id alacritty --hold -e sh -c 'LC_TIME=en_US.UTF-8 ikhal'
-
 
 for_window [title="Webcam Preview"] floating enable, sticky enable, border pixel 1, move absolute position 1550 px 800 px
 
-bindsym $mod+Control+w exec alacritty --title "wall-picker" -e ~/.config/scripts/wallpaper-picker.sh
+bindsym $mod+Control+w exec $DEFAULT_TERMINAL --title "wall-picker" -e ~/.config/scripts/wallpaper-picker.sh
 for_window [title="wall-picker"] floating enable, resize set 1000 650, move position center
 
 
