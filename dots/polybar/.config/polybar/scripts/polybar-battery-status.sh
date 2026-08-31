@@ -1,15 +1,20 @@
 #!/bin/bash
+# Find any battery (BAT0, BAT1, etc.) — falls back to nothing if none exists
+BAT_PATH=$(find /sys/class/power_supply -maxdepth 1 -name "BAT*" | head -n1)
 
-# Path to battery info (usually BAT0)
-BAT_PATH="/sys/class/power_supply/BAT0"
+# No battery found (desktop) — print nothing and exit
+if [[ -z "$BAT_PATH" ]]; then
+  exit 0
+fi
+
 bat=$(cat "$BAT_PATH/capacity")
 status=$(cat "$BAT_PATH/status")
 
 # Choose an icon based on status
 if [[ $status == "Charging" ]]; then
-  icon=""
+  icon=""
 else
-  icon=""
+  icon=""
 fi
 
 # Select color based on battery percentage
@@ -25,5 +30,4 @@ else
   color="#FF5555"  # red
 fi
 
-# Output formatted text with color
 echo "%{F$color}$icon%{F-} ${bat}%"
