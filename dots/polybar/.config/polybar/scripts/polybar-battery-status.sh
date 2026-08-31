@@ -12,9 +12,9 @@ status=$(cat "$BAT_PATH/status")
 
 # Choose an icon based on status
 if [[ $status == "Charging" ]]; then
-  icon=""
+  icon=""
 else
-  icon=""
+  icon=""
 fi
 
 # Select color based on battery percentage
