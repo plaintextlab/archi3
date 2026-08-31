@@ -14,7 +14,7 @@ fi
 yay -S gruvbox-plus-icon-theme-git
 
 # Gruvbox gtk theme
-yay -S gtk-theme-murrine
+yay -S gtk-engine-murrine
 git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme.git
 ./Gruvbox-GTK-Theme/themes/install.sh
 

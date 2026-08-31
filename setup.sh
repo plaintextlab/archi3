@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
 #------------------- Refresh mirrors first -----------------
-../setup/refresh-mirrors.sh
+~/archi3//setup/refresh-mirrors.sh
 
 
 #------------------- Install packages ----------------------
 # Native packages
 sudo pacman -S --needed xorg-server xorg-xinit xorg-xkill xorg-xset
-sudo pacman -S --needed redshift numlockx ddcutil base-devel flatpak
+sudo pacman -S --needed redshift numlockx ddcutil base-devel flatpak brightnessctl
 sudo pacman -S --needed dkms libva-nvidia-driver nvidia-open-dkms linux-headers linux-zen-headers nvidia-utils lib32-nvidia-utils nvidia-settings opencl-nvidia vulkan-icd-loader lib32-vulkan-icd-loader
-sudo pacman -S --needed i3-wm kitty feh eza yazi mpv mpc mpd dunst udiskie rofi polybar nemo stow starship fastfetch
-sudo pacman -S --needed lutris steam
+sudo pacman -S --needed i3-wm kitty feh eza yazi mpv mpc mpd dunst udiskie rofi polybar nemo stow starship fastfetch picom lxappearance playerctl
+sudo pacman -S --needed lutris steam firefox
 
 # Flatpak packages
 flatpak install -y com.vysp3r.ProtonPlus
@@ -21,10 +21,10 @@ flatpak install -y org.gimp.GIMP
 flatpak install -y org.kde.kdenlive
 
 # ------------------- Yay ----------------------------------
-../setup/yay-setup.sh
+~/archi3/setup/yay-setup.sh
 
 # ------------------ Gruvbox theme -------------------------
-../setup/gruvbox-setup.sh
+~/archi3/setup/gruvbox-setup.sh
 
 
 #------------------- Fonts ---------------------------------
@@ -33,7 +33,7 @@ fc-cache -fv
 
 #------------------- Link dotfiles -------------------------
 
-../setup/dotfiles-setup.sh
+~/archi3/setup/dotfiles-setup.sh
 
 # ------------------- Fixes --------------------------------
 # Fix nemo right click open terminal to kitty
