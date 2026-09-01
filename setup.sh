@@ -9,8 +9,8 @@
 sudo pacman -S --needed xorg-server xorg-xinit xorg-xkill xorg-xset
 sudo pacman -S --needed redshift numlockx ddcutil base-devel flatpak brightnessctl
 sudo pacman -S --needed dkms libva-nvidia-driver nvidia-open-dkms linux-headers linux-zen-headers nvidia-utils lib32-nvidia-utils nvidia-settings opencl-nvidia vulkan-icd-loader lib32-vulkan-icd-loader
-sudo pacman -S --needed i3-wm kitty feh eza yazi mpv mpc mpd dunst udiskie rofi polybar nemo stow starship fastfetch picom lxappearance playerctl
-sudo pacman -S --needed lutris steam firefox mousepad
+sudo pacman -S --needed i3-wm kitty feh eza yazi mpv mpc mpd dunst udiskie rofi polybar nemo stow starship fastfetch picom lxappearance playerctl network-manager-applet polkit-gnome maim slop xclip libnotify libpulse
+sudo pacman -S --needed lutris steam firefox mousepad rmpc gnome-disk-utility
 
 # Flatpak packages
 flatpak install -y com.vysp3r.ProtonPlus
@@ -26,6 +26,8 @@ xdg-user-dirs-update
 
 # ------------------- Yay ----------------------------------
 ~/archi3/setup/yay-setup.sh
+
+yay -Sy brave-origin-bin
 
 # ------------------ Gruvbox theme -------------------------
 ~/archi3/setup/gruvbox-setup.sh

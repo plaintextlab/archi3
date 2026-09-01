@@ -152,8 +152,7 @@ for_window [class="Sxiv"] border none
 exec --no-startup-id xsettingsd
 
 
-bindsym $win+Print exec --no-startup-id ~/.config/scripts/rofi-screen-capture-menu.sh
-bindsym $win+Shift+Print exec --no-startup-id ~/.config/scripts/stop-recording.sh
+
 
 bindsym $win+c exec galculator
 for_window [class="Galculator"] floating enable
