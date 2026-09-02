@@ -9,7 +9,7 @@
 sudo pacman -S --needed xorg-server xorg-xinit xorg-xkill xorg-xset
 sudo pacman -S --needed redshift numlockx ddcutil base-devel flatpak brightnessctl
 sudo pacman -S --needed dkms libva-nvidia-driver nvidia-open-dkms linux-headers linux-zen-headers nvidia-utils lib32-nvidia-utils nvidia-settings opencl-nvidia vulkan-icd-loader lib32-vulkan-icd-loader
-sudo pacman -S --needed i3-wm kitty feh eza yazi mpv mpc mpd dunst udiskie rofi polybar nemo stow starship fastfetch picom lxappearance playerctl network-manager-applet polkit-gnome maim slop xclip libnotify libpulse
+sudo pacman -S --needed i3-wm kitty feh eza yazi mpv mpc mpd dunst udiskie rofi polybar nemo stow starship fastfetch picom lxappearance playerctl network-manager-applet polkit-gnome maim slop xclip libnotify libpulse bc
 sudo pacman -S --needed lutris steam firefox mousepad rmpc gnome-disk-utility less
 
 # Flatpak packages
